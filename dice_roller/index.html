@@ -60,6 +60,31 @@
             width: 300px;
             background-color: black;
         }
+        .data{
+            margin-top: 40px;
+            
+        }
+        .dataElement{
+            width: 450px;
+            height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: bisque;
+            margin-bottom: 50px;
+        }
+        .roll {
+  animation: shake 0.5s;
+}
+
+@keyframes shake {
+  0% { transform: rotate(0deg) translate(0, 0); }
+  25% { transform: rotate(10deg) translate(5px, -5px); }
+  50% { transform: rotate(-10deg) translate(-5px, 5px); }
+  75% { transform: rotate(10deg) translate(5px, 5px); }
+  100% { transform: rotate(0deg) translate(0, 0); }
+}
+
     </style>
 </head>
 
@@ -68,16 +93,12 @@
         <h1>Dice Rolling Simulator</h1>
         <div id="inner">
             <div id="dice">
-                <div class="dot"></div> <!-- Top-left -->
-                <div class="dot"></div> <!-- Top-center -->
-                <div class="dot"></div> <!-- Top-right -->
-                <div class="dot"></div> <!-- Middle-left -->
-                <div class="dot"></div> <!-- Middle-center -->
-                <div class="dot"></div> <!-- Middle-right -->
+               
                 
             </div>
             <button id="rollBtn">Roll Dice</button>
         </div>
+        <section class="data" id="data">dsas</section>
     </main>
     <script src="app.js"></script>
 </body>
