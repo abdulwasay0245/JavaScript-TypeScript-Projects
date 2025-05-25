@@ -11,6 +11,10 @@
             align-items: center;
             justify-content: center;
         }
+        main{
+            display: flex;
+            flex-direction: column;
+        }
 
         #dice {
             height: 100px;
@@ -51,11 +55,16 @@
             gap: 40px;
             margin-top: 100px;
         }
+        .resultDiv{
+            height: 100px;
+            width: 300px;
+            background-color: black;
+        }
     </style>
 </head>
 
 <body>
-    <main>
+    <main id="main">
         <h1>Dice Rolling Simulator</h1>
         <div id="inner">
             <div id="dice">
@@ -70,6 +79,7 @@
             <button id="rollBtn">Roll Dice</button>
         </div>
     </main>
+    <script src="app.js"></script>
 </body>
 
 </html>
