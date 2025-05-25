@@ -9,22 +9,16 @@
 //     process.exit()
     
 // })
+function ageCalculate() {
+    const age = document.getElementById("age");
+    const userValue = age.value;
+    const result = document.getElementById("result")
+    const date = new Date()
+    const currentYear = date.getFullYear()
+    const userAge = currentYear - userValue;
 
-// function wasay() {
-//     let i = 1
-//     console.log(`I Love You ${i}`);
-//     i = 1+
-//     wasay();
-    
-// }
-// wasay()
+    result.innerText = userAge
 
-// do {
-//     console.log('wasay');
-    
-// } while ([] && '');
 
-while (payment = true) {
-    console.log("Your can proceed");
-    
 }
+btn.addEventListener('click', ageCalculate)
