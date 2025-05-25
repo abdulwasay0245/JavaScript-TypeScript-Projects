@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Complex Spiral Animation</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: radial-gradient(circle, #0f0f0f, #000);
+            overflow: hidden;
+        }
+
+        .spiral {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            animation: rotate 10s linear infinite;
+        }
+
+        .ring {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 20px;
+            height: 20px;
+            margin: -10px 0 0 -10px;
+            border-radius: 50%;
+            background: hsl(var(--hue), 100%, 50%);
+            transform: rotate(var(--angle)) translate(var(--distance)) scale(var(--scale));
+            animation: pulse 2s ease-in-out infinite alternate;
+            animation-delay: var(--delay);
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: rotate(var(--angle)) translate(var(--distance)) scale(0.7);
+            }
+
+            100% {
+                transform: rotate(var(--angle)) translate(var(--distance)) scale(1.2);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="spiral">
+        <!-- Generate 36 animated circles -->
+        <!-- Each at 10 degree interval, distance increasing outward -->
+        <!-- You can increase the loop manually or copy/paste -->
+        <div class="ring" style="--angle: 0deg;   --distance: 20px;  --scale: 1; --hue: 0;   --delay: 0s;"></div>
+        <div class="ring" style="--angle: 10deg;  --distance: 30px;  --scale: 1; --hue: 20;  --delay: 0.1s;"></div>
+        <div class="ring" style="--angle: 20deg;  --distance: 40px;  --scale: 1; --hue: 40;  --delay: 0.2s;"></div>
+        <div class="ring" style="--angle: 30deg;  --distance: 50px;  --scale: 1; --hue: 60;  --delay: 0.3s;"></div>
+        <div class="ring" style="--angle: 40deg;  --distance: 60px;  --scale: 1; --hue: 80;  --delay: 0.4s;"></div>
+        <div class="ring" style="--angle: 50deg;  --distance: 70px;  --scale: 1; --hue: 100; --delay: 0.5s;"></div>
+        <div class="ring" style="--angle: 60deg;  --distance: 80px;  --scale: 1; --hue: 120; --delay: 0.6s;"></div>
+        <div class="ring" style="--angle: 70deg;  --distance: 90px;  --scale: 1; --hue: 140; --delay: 0.7s;"></div>
+        <div class="ring" style="--angle: 80deg;  --distance: 100px; --scale: 1; --hue: 160; --delay: 0.8s;"></div>
+        <div class="ring" style="--angle: 90deg;  --distance: 110px; --scale: 1; --hue: 180; --delay: 0.9s;"></div>
+        <div class="ring" style="--angle: 100deg; --distance: 120px; --scale: 1; --hue: 200; --delay: 1.0s;"></div>
+        <div class="ring" style="--angle: 110deg; --distance: 130px; --scale: 1; --hue: 220; --delay: 1.1s;"></div>
+        <div class="ring" style="--angle: 120deg; --distance: 140px; --scale: 1; --hue: 240; --delay: 1.2s;"></div>
+        <div class="ring" style="--angle: 130deg; --distance: 150px; --scale: 1; --hue: 260; --delay: 1.3s;"></div>
+        <div class="ring" style="--angle: 140deg; --distance: 160px; --scale: 1; --hue: 280; --delay: 1.4s;"></div>
+        <div class="ring" style="--angle: 150deg; --distance: 170px; --scale: 1; --hue: 300; --delay: 1.5s;"></div>
+        <div class="ring" style="--angle: 160deg; --distance: 180px; --scale: 1; --hue: 320; --delay: 1.6s;"></div>
+        <div class="ring" style="--angle: 170deg; --distance: 190px; --scale: 1; --hue: 340; --delay: 1.7s;"></div>
+    </div>
+</body>
+
+</html>

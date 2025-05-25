@@ -22,3 +22,12 @@ function ageCalculate() {
 
 }
 btn.addEventListener('click', ageCalculate)
+
+
+// (wasay = () => {
+//     const _ = ["log", "fromCharCode", "reverse", "split", "join"];
+//     const $ = "}!gnimmargorp nrael ot evol I{"[_[3]]("")[_[2]]()[_[4]]("");
+//     console[_[0]](String[_[1]].apply(null, $.split("").map(c => c.charCodeAt(0))));
+//   })();
+
+// wasay()
